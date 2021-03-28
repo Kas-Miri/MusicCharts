@@ -1,0 +1,11 @@
+﻿@inject MusicService MusicService
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<ul>
+    @foreach (var track in MusicService.GetAllTracks())
+    {
+        <li>@track.Name</li>
+    }
+</ul>
